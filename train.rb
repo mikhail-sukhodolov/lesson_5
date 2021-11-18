@@ -51,6 +51,10 @@ class Train
     self.station.departure(self)
     self.station = prev_station if cur_station != route.station_list.first
     self.station.get_train(self)
-  end  
+  end
+  
+  def add_wagon(wagon)
+    @wagons << wagon
+  end
 
 end   
