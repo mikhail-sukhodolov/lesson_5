@@ -2,9 +2,8 @@ require_relative 'train'
 
 class PassTrain < Train
 
-  attr_reader :type
-
-  def type
+  def initialize(train_number)
+    super
     @type = 'passenger'
   end
 
