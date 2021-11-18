@@ -107,9 +107,9 @@ class Main
       wagon_number = gets.chomp
       case type
       when 'cargo'
-        @trains[position].wagons << CargoWagon.new(wagon_number)
+        @trains[position].add_wagon(CargoWagon.new(wagon_number))
       when 'passenger'
-        @trains[position].wagons << PassWagon.new(wagon_number)
+        @trains[position].add_wagon(PassWagon.new(wagon_number))
       end
       puts "Вагон добавлен"
     end
